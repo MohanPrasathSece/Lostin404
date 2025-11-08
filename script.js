@@ -610,7 +610,11 @@ function retryLoad() {
 
 // Whitepaper Button
 function openWhitepaper() {
-    showPopup('> Loading whitepaper.pdf...<br>> Error: File not found (0kb)<br>> Download failed<br>> Reason: File does not exist<br>> Status: Intentionally missing');
+    try {
+        window.open('https://404-5.gitbook.io/404-docs/', '_blank');
+    } catch (e) {
+        showPopup('> Loading whitepaper.pdf...<br>> Error: File not found (0kb)<br>> Download failed<br>> Reason: File does not exist<br>> Status: Intentionally missing');
+    }
 }
 
 // Top-right actions
